@@ -131,23 +131,27 @@ int ultrasonic() {
   long cm = t / 29 / 2; //time convert distance
   return cm;
 }
+//M1 upper right
+//M2 upper left
+//M3 lower left
+//M4 lower right
 
 void forward() {
   M1.run(FORWARD);
-  M2.run(BACKWARD);
-  M3.run(BACKWARD);
+  M2.run(FORWARD);
+  M3.run(FORWARD);
   M4.run(FORWARD);
 }
 void backward() {
   M1.run(BACKWARD);
-  M2.run(FORWARD);
-  M3.run(FORWARD);
+  M2.run(BACKWARD);
+  M3.run(BACKWARD);
   M4.run(BACKWARD);
 }
 void right() {
   M1.run(RELEASE);
-  M2.run(BACKWARD);
-  M3.run(BACKWARD);
+  M2.run(FORWARD);
+  M3.run(FORWARD);
   M4.run(RELEASE);
 }
 void left() {
