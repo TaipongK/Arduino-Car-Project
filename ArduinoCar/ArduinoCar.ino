@@ -24,8 +24,6 @@ AF_DCMotor M3(3);
 AF_DCMotor M4(4);
 // setup pins
 
-
-
 void setup() {
   Serial.begin(9600);
   pinMode(Trig, OUTPUT);
